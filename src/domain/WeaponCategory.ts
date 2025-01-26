@@ -9,7 +9,7 @@ enum WeaponCategory {
   Dualies = "マニューバー",
   Brush = "フデ",
   Stringer = "ストリンガー",
-  Splatana = "ワイパー"
+  Splatana = "ワイパー",
 }
 
 export default WeaponCategory;
