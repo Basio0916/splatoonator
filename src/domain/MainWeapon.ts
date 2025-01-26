@@ -13,6 +13,10 @@ interface MainWeapon {
   canRapidFire: Answer;
   canCharge: Answer;
   isExplosive: Answer;
+  canRollingOrBrushing: Answer;
+  canChargeKeep: Answer;
+  dodgeRollCount: number;
+  hasDirectHitSound: Answer;
 }
 
 export default MainWeapon;
