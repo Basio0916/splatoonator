@@ -4,7 +4,7 @@ import GreaterThanOrEqual from "../comparator/GreaterThanOrEqual";
 import LessThanOrEqual from "../comparator/LessThanOrEqual";
 
 class ComparatorFactory {
-  static create(type: string): Comparator {
+  static create(type: string | undefined): Comparator {
     switch (type) {
       case "以上？":
         return new GreaterThanOrEqual();
