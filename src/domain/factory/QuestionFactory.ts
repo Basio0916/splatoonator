@@ -70,7 +70,7 @@ class QuestionFactory {
           ComparatorFactory.create(comparator)
         );
       case "MainWeaponNameQuestion":
-        return new MainWeaponNameQuestion(answerWeapon, option || "");
+        return new MainWeaponNameQuestion(answerWeapon, trimmedOption);
       case "RangeQuestion":
         return new RangeQuestion(
           answerWeapon,
@@ -116,7 +116,7 @@ class QuestionFactory {
           ComparatorFactory.create(comparator)
         );
       case "SubWeaponNameQuestion":
-        return new SubWeaponNameQuestion(answerWeapon, option || "");
+        return new SubWeaponNameQuestion(answerWeapon, trimmedOption);
 
       case "CanOneShotQuestion":
         return new CanOneShotQuestion(answerWeapon);
@@ -131,7 +131,7 @@ class QuestionFactory {
       case "SpecialWeaponIsAttackTypeQuestion":
         return new SpecialWeaponIsAttackTypeQuestion(answerWeapon);
       case "SpecialWeaponNameQuestion":
-        return new SpecialWeaponNameQuestion(answerWeapon, option || "");
+        return new SpecialWeaponNameQuestion(answerWeapon, trimmedOption);
       default:
         throw new Error("Invalid questionName");
     }

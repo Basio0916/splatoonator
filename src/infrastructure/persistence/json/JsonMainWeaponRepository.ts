@@ -3,7 +3,7 @@ import MainWeaponRepository from "../../../domain/repository/MainWeaponRepositor
 import mainWeapons from "../../../../resource/data/mainWeapons.json";
 import WeaponCategoryFactory from "../../../domain/factory/WeaponCategoryFactory";
 import WeightFactory from "../../../domain/factory/WeightFactory";
-import AnswerFactory from "../../../domain/factory/AnswerFactory";
+import ResultFactory from "../../../domain/factory/ResultFactory";
 
 class JsonMainWeaponRepository implements MainWeaponRepository {
   findByName(name: string): MainWeapon {
@@ -29,15 +29,15 @@ class JsonMainWeaponRepository implements MainWeaponRepository {
       ],
       spread: [Number(mainWeapon.spread1), Number(mainWeapon.spread2)],
       weight: WeightFactory.create(mainWeapon.weight),
-      canRapidFire: AnswerFactory.create(mainWeapon.canRapidFire),
-      canCharge: AnswerFactory.create(mainWeapon.canCharge),
-      isExplosive: AnswerFactory.create(mainWeapon.isExplosive),
-      canRollingOrBrushing: AnswerFactory.create(
+      canRapidFire: ResultFactory.create(mainWeapon.canRapidFire),
+      canCharge: ResultFactory.create(mainWeapon.canCharge),
+      isExplosive: ResultFactory.create(mainWeapon.isExplosive),
+      canRollingOrBrushing: ResultFactory.create(
         mainWeapon.canRollingOrBrushing
       ),
-      canChargeKeep: AnswerFactory.create(mainWeapon.canChargeKeep),
+      canChargeKeep: ResultFactory.create(mainWeapon.canChargeKeep),
       dodgeRollCount: Number(mainWeapon.dodgeRollCount),
-      hasDirectHitSound: AnswerFactory.create(mainWeapon.hasDirectHitSound),
+      hasDirectHitSound: ResultFactory.create(mainWeapon.hasDirectHitSound),
     };
   }
 }

@@ -1,18 +1,25 @@
-import WeaponRepository from "../../../domain/repository/WeaponRepository";
-import Weapon from "../../../domain/Weapon";
+// import { inject, injectable } from "inversify";
+// import "reflect-metadata";
+import type WeaponRepository from "../../../domain/repository/WeaponRepository";
+import type Weapon from "../../../domain/Weapon";
 import weapons from "../../../../resource/data/Weapons.json";
-import MainWeaponRepository from "../../../domain/repository/MainWeaponRepository";
-import SubWeaponRepository from "../../../domain/repository/SubWeaponRepository";
-import SpecialWeaponRepository from "../../../domain/repository/SpecialWeaponRepository";
+import type MainWeaponRepository from "../../../domain/repository/MainWeaponRepository";
+import type SubWeaponRepository from "../../../domain/repository/SubWeaponRepository";
+import type SpecialWeaponRepository from "../../../domain/repository/SpecialWeaponRepository";
+// import TYPES from "../../../type/types";
 
+//@injectable()
 class JsonWeaponRepository implements WeaponRepository {
   mainWeaponRepository: MainWeaponRepository;
   subWeaponRepository: SubWeaponRepository;
   specialWeaponRepository: SpecialWeaponRepository;
 
   constructor(
+    //@inject(TYPES.MainWeaponRepository)
     mainWeaponRepository: MainWeaponRepository,
+    //@inject(TYPES.SubWeaponRepository)
     subWeaponRepository: SubWeaponRepository,
+    //@inject(TYPES.SpecialWeaponRepository)
     specialWeaponRepository: SpecialWeaponRepository
   ) {
     this.mainWeaponRepository = mainWeaponRepository;

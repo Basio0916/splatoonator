@@ -1,6 +1,6 @@
 import Result from "../Result";
 
-class AnswerFactory {
+class ResultFactory {
   static create(value: string): Result {
     switch (value.toUpperCase()) {
       case "YES":
@@ -15,4 +15,4 @@ class AnswerFactory {
   }
 }
 
-export default AnswerFactory;
+export default ResultFactory;
