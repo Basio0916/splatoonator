@@ -1,6 +1,6 @@
 import MainWeapon from "../../../domain/MainWeapon";
 import MainWeaponRepository from "../../../domain/repository/MainWeaponRepository";
-import mainWeapons from "../../../../resource/data/mainWeapons.json";
+import mainWeapons from "../../../../resource/data/MainWeapons.json";
 import WeaponCategoryFactory from "../../../domain/factory/WeaponCategoryFactory";
 import WeightFactory from "../../../domain/factory/WeightFactory";
 import ResultFactory from "../../../domain/factory/ResultFactory";
