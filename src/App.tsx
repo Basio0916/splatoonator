@@ -13,7 +13,6 @@ import SubmissionModal from "./component/SubmissionModal";
 import Result from "./domain/Result";
 import ProgressModal from "./component/ProgressModal";
 import QuestionHistoryModal from "./component/QuestionHistoryModal";
-import TYPES from "./type/types";
 import Weapon from "./domain/Weapon";
 import GetAnswerUsecase from "./usecase/GetAnswerUsecase";
 import WeaponRepository from "./domain/repository/WeaponRepository";
