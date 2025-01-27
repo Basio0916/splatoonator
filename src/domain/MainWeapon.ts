@@ -1,5 +1,5 @@
 import WeaponCategory from "./WeaponCategory";
-import Answer from "./Answer";
+import Result from "./Result";
 import Weight from "./Weight";
 
 interface MainWeapon {
@@ -10,13 +10,13 @@ interface MainWeapon {
   firingInterval: number[];
   spread: number[];
   weight: Weight;
-  canRapidFire: Answer;
-  canCharge: Answer;
-  isExplosive: Answer;
-  canRollingOrBrushing: Answer;
-  canChargeKeep: Answer;
+  canRapidFire: Result;
+  canCharge: Result;
+  isExplosive: Result;
+  canRollingOrBrushing: Result;
+  canChargeKeep: Result;
   dodgeRollCount: number;
-  hasDirectHitSound: Answer;
+  hasDirectHitSound: Result;
 }
 
 export default MainWeapon;

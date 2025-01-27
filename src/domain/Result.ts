@@ -1,7 +1,7 @@
-enum Answer {
+enum Result {
   YES = "YES",
   NO = "NO",
   PARTIAL = "PARTIAL",
 }
 
-export default Answer;
+export default Result;

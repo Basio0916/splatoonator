@@ -1,4 +1,4 @@
-import Answer from "../../Answer";
+import Result from "../../Result";
 import Weapon from "../../Weapon";
 import WeaponCategory from "../../WeaponCategory";
 import Question from "../Question";
@@ -13,11 +13,11 @@ class WeaponCategoryQuestion extends Question {
     this.weaponCategory = weaponCategory;
   }
 
-  answer(): Answer {
+  answer(): Result {
     if (this.answerWeapon.mainWeapon.weaponCategory === this.weaponCategory) {
-      return Answer.YES;
+      return Result.YES;
     } else {
-      return Answer.NO;
+      return Result.NO;
     }
   }
 }

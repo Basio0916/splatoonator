@@ -1,4 +1,4 @@
-import Answer from "../../Answer";
+import Result from "../../Result";
 import Weapon from "../../Weapon";
 import Question from "../Question";
 
@@ -9,7 +9,7 @@ class IsExplosiveQuestion extends Question {
     super();
     this.answerWeapon = answerWeapon;
   }
-  answer(): Answer {
+  answer(): Result {
     return this.answerWeapon.mainWeapon.isExplosive;
   }
 }

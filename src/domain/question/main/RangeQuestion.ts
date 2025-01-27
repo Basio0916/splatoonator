@@ -1,4 +1,4 @@
-import Answer from "../../Answer";
+import Result from "../../Result";
 import Comparator from "../../comparator/Comparator";
 import Weapon from "../../Weapon";
 import Question from "../Question";
@@ -19,7 +19,7 @@ class RangeQuestion extends Question {
     this.comparator = comparator;
   }
 
-  answer(): Answer {
+  answer(): Result {
     let matchCount = 0;
     for (const range of this.answerWeapon.mainWeapon.range) {
       if (this.comparator.compare(range, this.targetRange)) {
@@ -27,11 +27,11 @@ class RangeQuestion extends Question {
       }
     }
     if (matchCount === 0) {
-      return Answer.NO;
+      return Result.NO;
     } else if (matchCount === this.answerWeapon.mainWeapon.range.length) {
-      return Answer.YES;
+      return Result.YES;
     } else {
-      return Answer.PARTIAL;
+      return Result.PARTIAL;
     }
   }
 }

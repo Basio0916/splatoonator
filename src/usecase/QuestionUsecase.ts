@@ -1,4 +1,4 @@
-import Answer from "../domain/Answer";
+import Result from "../domain/Result";
 import QuestionFactory from "../domain/factory/QuestionFactory";
 import Weapon from "../domain/Weapon";
 
@@ -8,7 +8,7 @@ class QuestionUsecase {
     questionName: string,
     option?: string,
     comparator?: string
-  ): Answer {
+  ): Result {
     const question = QuestionFactory.create(
       questionName,
       answerWeapon,

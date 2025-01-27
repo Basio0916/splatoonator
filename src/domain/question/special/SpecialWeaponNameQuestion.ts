@@ -1,4 +1,4 @@
-import Answer from "../../Answer";
+import Result from "../../Result";
 import Weapon from "../../Weapon";
 import Question from "../Question";
 
@@ -12,11 +12,11 @@ class SpecialWeaponNameQuestion extends Question {
     this.targetSpecialWeaponName = targetSpecialWeaponName;
   }
 
-  answer(): Answer {
+  answer(): Result {
     if (this.answerWeapon.specialWeapon.name === this.targetSpecialWeaponName) {
-      return Answer.YES;
+      return Result.YES;
     } else {
-      return Answer.NO;
+      return Result.NO;
     }
   }
 }

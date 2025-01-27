@@ -1,13 +1,13 @@
-import Answer from "./Answer";
+import Result from "./Result";
 
 interface SpecialWeapon {
   name: string;
-  hasZRButtonAction: Answer;
-  hasRButtonAction: Answer;
-  canOneShot: Answer;
-  dealsContinuousDamage: Answer;
-  isAttackType: Answer;
-  jumpsToUsePoint: Answer;
+  hasZRButtonAction: Result;
+  hasRButtonAction: Result;
+  canOneShot: Result;
+  dealsContinuousDamage: Result;
+  isAttackType: Result;
+  jumpsToUsePoint: Result;
 }
 
 export default SpecialWeapon;

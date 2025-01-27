@@ -1,7 +1,7 @@
-import Answer from "../Answer";
+import Result from "../Result";
 
 abstract class Question {
-  abstract answer(): Answer;
+  abstract answer(): Result;
 }
 
 export default Question;

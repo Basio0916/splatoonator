@@ -1,4 +1,4 @@
-import Answer from "../../Answer";
+import Result from "../../Result";
 import Weapon from "../../Weapon";
 import Question from "../Question";
 
@@ -10,7 +10,7 @@ class CanOneShotQuestion extends Question {
     this.answerWeapon = answerWeapon;
   }
 
-  answer(): Answer {
+  answer(): Result {
     return this.answerWeapon.specialWeapon.canOneShot;
   }
 }

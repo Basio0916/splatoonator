@@ -1,4 +1,4 @@
-import Answer from "../../Answer";
+import Result from "../../Result";
 import Comparator from "../../comparator/Comparator";
 import Weapon from "../../Weapon";
 import Question from "../Question";
@@ -19,16 +19,16 @@ class SubWeaponMaxDamageQuestion extends Question {
     this.comparator = comparator;
   }
 
-  answer(): Answer {
+  answer(): Result {
     if (
       this.comparator.compare(
         Math.max(...this.answerWeapon.subWeapon.damage),
         this.targetMaxDamage
       )
     ) {
-      return Answer.YES;
+      return Result.YES;
     } else {
-      return Answer.NO;
+      return Result.NO;
     }
   }
 }
