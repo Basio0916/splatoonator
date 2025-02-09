@@ -33,7 +33,7 @@ jobs:
           node-version: 18
 
       - name: Cache Node.js modules
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: node_modules
           key: ${{ runner.OS }}-node-${{ hashFiles('package-lock.json') }}
@@ -52,7 +52,7 @@ jobs:
         uses: actions/configure-pages@v3
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: "./dist"
 
