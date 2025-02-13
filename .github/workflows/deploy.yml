@@ -56,6 +56,9 @@ jobs:
         with:
           path: "./dist"
 
+      - name: List files in dist
+        run: ls -al ./dist
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
